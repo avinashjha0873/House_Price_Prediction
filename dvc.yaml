@@ -1,0 +1,3 @@
+stages:
+  load_data:
+    cmd: python src\load_data.py

@@ -1,9 +1,9 @@
 import pandas as pd
 from load_data import get_dataset
 
-training_data_path = r"D:\Python\House_Price_Prediction\data\processed\split\training_house_data.csv"
-cleaned_data_path = r"D:\Python\House_Price_Prediction\data\processed\cleaned\training_house_data.csv"
-zipcode_data_path = r"D:\Python\House_Price_Prediction\data\processed\cleaned\zipcode_house_data.csv"
+training_data_path = r"D:\Python\House_Price_Prediction\data\raw\kc_house_data.csv"
+cleaned_data_path = r"D:\Python\House_Price_Prediction\data\processed\cleaned_training_house_data.csv"
+zipcode_data_path = r"D:\Python\House_Price_Prediction\data\processed\zipcode_house_data.csv"
 
 def change_data_type(data):
     data['Id'] = data['Id'].astype('object')
