@@ -1,19 +1,19 @@
 create conda environment
 
-'''bash
+```bash
 conda create -n House_Price_Prediction
-'''
+```
 
 activate conda environment
 
-'''bash
+```bash
 conda activate House_Price_Prediction
-'''
+```
 
 install the project requirements 
-'''bash
+```bash
 pip install -r requirement 
-'''
+```
 
 download the dataset from
 https://www.kaggle.com/harlfoxem/housesalesprediction
@@ -21,13 +21,14 @@ https://www.kaggle.com/harlfoxem/housesalesprediction
 add it to given_data folder
 
 Intializing git
-'''bash
+```bash
 git init -b main
-'''
+```
 
 dvc
-'''bash
+```bash
 init dvc
-'''
+```
+
 
 
