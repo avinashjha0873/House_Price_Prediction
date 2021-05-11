@@ -9,7 +9,7 @@ def feature_engineering(data):
     data['Age'] = 2020 - data['Year_Built']
     data['Change_In_Sqft_Living'] = data['Sqft_Living_2015'] - data['Sqft_Living']
     data['Change_In_Sqft_Plot'] = data['Sqft_Plot_2015'] - data['Sqft_Plot']
-    data = data.drop(['Year_Built', 'Year_Renovated'], axis = 1)
+    data = data.drop(['Year_Built', 'Year_Renovated','Transaction_Date'], axis = 1)
     return data
 
 def add_ratios(data):

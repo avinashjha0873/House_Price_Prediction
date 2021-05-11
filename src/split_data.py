@@ -6,7 +6,7 @@ train_data_path = r"D:\Python\House_Price_Prediction\data\final\split\training_h
 test_data_path = r"D:\Python\House_Price_Prediction\data\final\split\testing_house_data.csv"
 
 def split_data(df):
-    training_data, test_data  = train_test_split(df, test_size=0.2, random_state= 7)
+    training_data, test_data  = train_test_split(df, test_size=0.1, random_state= 7)
     print(training_data.shape)
     print(test_data.shape)
     training_data.to_csv(train_data_path, index = False)

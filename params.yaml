@@ -1,0 +1,24 @@
+base:
+  project: House_Price_Prediction
+  random_state: 7
+
+data_source:
+  excel_sheet: given_data\kc_house_data.csv
+
+load_data:
+  raw_dataset: data\raw\kc_house_data.csv
+
+process_data:
+  cleaned_dataset: data\processed\cleaned_training_house_data.csv
+  zipcode_dataset: data\processed\zipcode_house_data.csv
+  final_dataset: data\final\kc_house_data.csv
+
+split_data:
+  training_dataset: data\final\training_house_data.csv
+  testing_dataset: data\final\testing_house_data.csv
+
+estimators:
+  DummyRegressor:
+    pramams:
+      strategy: 'mean'
+      
