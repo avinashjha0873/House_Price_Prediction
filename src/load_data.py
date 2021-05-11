@@ -6,7 +6,7 @@ data_source_path = r"D:\Python\House_Price_Prediction\data\raw\kc_house_data.csv
 
 
 def get_dataset(path):
-    data = pd.read_csv(path)
+    data = pd.read_csv(path, index_col=0)
     return data
 
 def save_dataset(data, path):
@@ -21,5 +21,5 @@ def save_dataset(data, path):
 
 if __name__ == "__main__":
     df = get_dataset(original_path)
-    #print(df.head())
+    print(df.head())
     save_dataset(df, data_source_path)
