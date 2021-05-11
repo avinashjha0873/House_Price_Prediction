@@ -6,7 +6,7 @@ data_source_path = r"D:\Python\House_Price_Prediction\data\raw\kc_house_data.csv
 
 
 def get_dataset(path):
-    data = pd.read_csv(path, index_col=0)
+    data = pd.read_csv(path)
     return data
 
 def save_dataset(data, path):
@@ -15,11 +15,10 @@ def save_dataset(data, path):
                     'Condition', 'Grade', 'Sqft_Above', 'Sqft_Basement', 'Year_Built',
                     'Year_Renovated', 'Zipcode', 'Latitude', 'Longitude', 'Sqft_Living_2015', 'Sqft_Plot_2015']
     data.columns = Column_Names
-    # print(data.head())
-    data.to_csv(path)
+    print(data.shape)
+    data.to_csv(path, index= False)
 
 
 if __name__ == "__main__":
     df = get_dataset(original_path)
-    print(df.head())
     save_dataset(df, data_source_path)
