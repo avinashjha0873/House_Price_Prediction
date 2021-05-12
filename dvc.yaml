@@ -5,4 +5,20 @@ stages:
     - src\load_data.py
     - given_data\kc_house_data.csv
     outs:
-      - data\raw\kc_house_data.csv
+    - data\raw\kc_house_data.csv
+  data_wrangling:
+    cmd: python src\data_wrangling.py
+    deps:
+    - src\data_wrangling.py
+    - src\load_data.py
+    - data\raw\kc_house_data.csv
+    outs:
+    - data\processed\cleaned_training_house_data.csv
+    - data\processed\zipcode_house_data.csv
+
+#  eda:
+#    cmd: python src\exploratory_data_analysis.py
+#    deps:
+#      - src\exploratory_data_analysis.py
+#      - src\load_data.py
+#      -
