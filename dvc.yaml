@@ -16,9 +16,13 @@ stages:
     - data\processed\cleaned_training_house_data.csv
     - data\processed\zipcode_house_data.csv
 
-#  eda:
-#    cmd: python src\exploratory_data_analysis.py
-#    deps:
-#      - src\exploratory_data_analysis.py
-#      - src\load_data.py
-#      -
+  eda:
+    cmd: python src\exploratory_data_analysis.py
+    deps:
+      - src\exploratory_data_analysis.py
+      - src\load_data.py
+      - data\processed\cleaned_training_house_data.csv
+      - data\processed\zipcode_house_data.csv
+    outs:
+      - data\final\kc_house_data.csv
+

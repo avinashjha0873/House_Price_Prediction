@@ -32,3 +32,22 @@ stages:
     - path: data\processed\zipcode_house_data.csv
       md5: b04f0301367511d52a534101ac64fca8
       size: 4669
+  eda:
+    cmd: python src\exploratory_data_analysis.py
+    deps:
+    - path: data\processed\cleaned_training_house_data.csv
+      md5: 88993c324a6af27fadc692b8a73f3e97
+      size: 2545175
+    - path: data\processed\zipcode_house_data.csv
+      md5: b04f0301367511d52a534101ac64fca8
+      size: 4669
+    - path: src\exploratory_data_analysis.py
+      md5: 62cb5414def2939feae024c8d53db2ee
+      size: 2340
+    - path: src\load_data.py
+      md5: 778d0e292e532b1c7449ac1e25b0bbe5
+      size: 897
+    outs:
+    - path: data\final\kc_house_data.csv
+      md5: 93d14d6c21d0412c53dfd760cb6397d4
+      size: 5603487
