@@ -14,11 +14,17 @@ process_data:
   final_dataset: data\final\kc_house_data.csv
 
 split_data:
-  training_dataset: data\final\training_house_data.csv
-  testing_dataset: data\final\testing_house_data.csv
+  training_dataset: data\final\split\training_house_data.csv
+  testing_dataset: data\final\split\testing_house_data.csv
 
 estimators:
   DummyRegressor:
     pramams:
       strategy: 'mean'
+  LinearRegressor:
+
+model_dir: models
+reports:
+  params: report/params.json
+  scores: report/scores.json
       

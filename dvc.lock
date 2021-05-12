@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src\load_data.py
+    deps:
+    - path: given_data\kc_house_data.csv
+      md5: b1e7bdf4f3e61792c0979a5697dc7145
+      size: 2536820
+    - path: src\load_data.py
+      md5: 778d0e292e532b1c7449ac1e25b0bbe5
+      size: 897
+    outs:
+    - path: data\raw\kc_house_data.csv
+      md5: 2dd6cf305dc0a7cf89b0e60280e1f5f1
+      size: 2453882
