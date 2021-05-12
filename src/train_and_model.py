@@ -21,7 +21,7 @@ def train_and_evaluate(data):
                                                 test_size = 0.1,
                                                 random_state = 7
                                             )
-    print(data.info())
+    print(train_X.info())
     model = LinearRegression()
     model.fit(train_X, train_y)
     y_tr_pred = model.predict(train_X)

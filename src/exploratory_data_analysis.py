@@ -12,6 +12,7 @@ def feature_engineering(data):
     data = data.drop(['Year_Built', 'Year_Renovated','Transaction_Date'], axis = 1)
     return data
 
+
 def add_ratios(data):
     Housing_Data_New = data
     Housing_Data_New['sqft_living_zipcode_ratio'] = Housing_Data_New.Sqft_Living / Housing_Data_New.ZipCode_Total_sqft_living
