@@ -1,4 +1,4 @@
-import json
+
 
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -12,6 +12,7 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, a
 import math
 from data_wrangling import change_data_type
 import joblib
+import json
 
 train_data_path = r"D:\Python\House_Price_Prediction\data\final\split\training_house_data.csv"
 score_file_path = r"D:\Python\House_Price_Prediction\reports\scores.json"
