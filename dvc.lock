@@ -51,3 +51,22 @@ stages:
     - path: data\final\kc_house_data.csv
       md5: 93d14d6c21d0412c53dfd760cb6397d4
       size: 5603487
+  split_data:
+    cmd: python src\split_data.py
+    deps:
+    - path: data\final\kc_house_data.csv
+      md5: 93d14d6c21d0412c53dfd760cb6397d4
+      size: 5603487
+    - path: src\load_data.py
+      md5: 778d0e292e532b1c7449ac1e25b0bbe5
+      size: 897
+    - path: src\split_data.py
+      md5: 5545650d5b9f7df0873bda1b95a7636a
+      size: 827
+    outs:
+    - path: data\final\split\testing_house_data.csv
+      md5: b0bbb0884cd9881b3acea29172dd6e23
+      size: 531130
+    - path: data\final\split\training_house_data.csv
+      md5: 28d114db77c7cb7481feac607b327071
+      size: 4774705

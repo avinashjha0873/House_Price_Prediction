@@ -25,4 +25,16 @@ stages:
       - data\processed\zipcode_house_data.csv
     outs:
       - data\final\kc_house_data.csv
+  split_data:
+    cmd: python src\split_data.py
+    deps:
+      - src\split_data.py
+      - src\load_data.py
+      - data\final\kc_house_data.csv
+    outs:
+      - data\final\split\testing_house_data.csv
+      - data\final\split\training_house_data.csv
+
+
+
 

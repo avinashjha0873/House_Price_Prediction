@@ -9,10 +9,13 @@ def split_data(df):
     training_data, test_data  = train_test_split(df, test_size=0.1, random_state= 7)
     print(training_data.shape)
     print(test_data.shape)
-    training_data.to_csv(train_data_path, index = False)
-    test_data.to_csv(test_data_path, index=False)
+    return training_data, test_data
+
 
 if __name__== "__main__":
     data = get_dataset(data_source_path)
-    split_data(data)
+    training_data, test_data = split_data(data)
+    training_data.to_csv(train_data_path, index = False)
+    test_data.to_csv(test_data_path, index=False)
+
 
